@@ -1,0 +1,19 @@
+These are images of bank confirmation for a tax year which starts from 2021 April 1 and ends 2022 March 31.You will find bank accounts with interest and tax on them.
+
+Read the document and identify name of the bank, name of the account holder or client, National Identity card No.(NIC No.), Date that the statement was issued.
+
+Look for keywords like "Account Number", "Currency", "Gross Interest", "Withholding Tax", "Balance" or similar variations. Extract data associated with these fields.
+
+Account Number (A/C No)
+Gross Interest paid from 2021.04.01 to 2022.03.31("Return value not found" if not found) i.e. interest paid from the account for the period of 2021.04.01 to 2022.03.31
+Withholding Tax (WHT) deducted ("Return value not found" if not found) i.e. tax amount deducted for the interest earned
+Closing Balance  ("Return value not found" if not found) i.e. account balance as of 2022.03.31
+Currency Type ("LKR" if not found) currency of the account
+
+format the output for each account and the overall details as follows;
+
+(name of the bank | name of the account holder or client | National Identity card No.(NIC No.) | Date that the statement was issued | WHT agent TIN | WHT certification no.),(Account number | Gross Interest paid from 2021.04.01 to 2022.03.31 | Withholding Tax (WHT) deducted | Closing Balance | Currency Type),(Account number | Gross Interest paid from 2021.04.01 to 2022.03.31 | Withholding Tax (WHT) deducted | Closing Balance | Currency Type)
+
+repeat the sections with Account number per each bank account found in the document here I have included for two bank accounts but you may find more.
+
+Strictly follow the format given If you can not find a value to a given field include a “0” in the response instead.Do not add anything additional.

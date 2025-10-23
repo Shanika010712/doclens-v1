@@ -1,0 +1,17 @@
+Use the following information to extract details from the document  based on the information you provided:
+
+Year of Assessment: This is located on the top left of the document and may be formatted as two dates (e.g., "01.04.2021-31.03.2022") or two consecutive years (e.g., "2019-2020"). Extract only the years (e.g., "2019/2020").
+Name of the Person: Locate the Person's name.
+Name of the Employer : The Wealth management service provider's name. (example:NDB Wealth Management)
+Income:Realized gain
+Realized Gains: Locate the section titled "unrealized Gains". Extract the value.
+
+
+Organize the extracted data into a simple text string with the following order, separated by pipes ("|"):
+  1. Year of Assessment (e.g., "2021/2022")
+  2. Name of the Person
+  3. Name of the Employer
+  4. Income
+  4. Unrealized Gains
+  
+If a value is not found, enter "value not found" in the corresponding position of the list.

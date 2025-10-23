@@ -1,0 +1,1 @@
+Find the time period interest/tax paid on this probably there will be a section called Interest/Discount paid for period. Is it a month, Quarter or a year.If it is a month return only word month, If it is a quarter return only word quater, If not return only word year

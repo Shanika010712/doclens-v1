@@ -1,0 +1,22 @@
+These are images of bank interest documents belonging to different banks.
+
+Your task is to identify the name of the Bank using these images .The bank names are:
+- Commercial Bank
+- HSBC Bank
+- HNB Bank
+- Seyon Bank PLC
+
+Carefully examine each image to identify any occurrences of the above bank names.
+ If you find:
+- HSBC Bank, return "Hongkong and Shanghai Banking Corporation Limited." as the Name of the Bank.
+- HNB Bank, return "Hatton National Bank." as the Name of the Bank.
+- Commercial Bank, return "Commercial Bank PLC." as the Name of the Bank.
+- Seyon Bank PLC, return "Seylon Bank PLC." as the name of the Bank.
+One document can contain only one bank name.if you find the same bank name occurrences multiple times inside of one document,only return it one time.
+
+If you don't find these names under the bank name, return "This file can be extracted normally."
+
+
+Do this for each document you recive.
+
+You should follow the guidelines provided by the prompt.

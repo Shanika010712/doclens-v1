@@ -1,0 +1,16 @@
+These are images of bank confirmation for a tax year which starts from 2023 April 1 and ends 2024 March 31.You will find bank accounts with interest and tax per month.
+Read the images and identify the name of the bank, name of the account holder or client, National Identity card No.(NIC No.), Date that the statement was issued.
+Look for keywords like "Account Number", "Currency", "Gross Interest", "Withholding Tax", "Balance" or similar variations. Extract data associated with these fields for each available month.
+
+The month interest and tax data belongs to; i.e. the period interest paid for return only the name of the month
+Account Number (A/C No)
+Gross Interest paid ("Return value not found" if not found) i.e. interest paid from the account for the year
+Withholding Tax (WHT) deducted ("Return value not found" if not found) i.e. tax amount deducted for the interest earned
+Currency Type ("LKR" if not found) currency of the account
+Account number & National Identity card No.(NIC No.) are totally different
+repeat this for every Account number you found.
+please include Gross Interest paid, Withholding Tax (WHT) deducted  and WHT certification number(reference coumn) per every month data available. I have given you the example format for one bank account with two months but you may find more.
+format the output for each month and account and the overall details as follows and separated by pipes ("|").
+[name of the bank | name of the account holder or client | National Identity card No.(NIC No.) | Date that the statement was issued | WHT agent TIN | WHT certification no.],[Account number|Currency Type],[Month| Gross Interest paid | Withholding Tax (WHT) deducted | WHT certification no],[Month| Gross Interest paid | Withholding Tax (WHT) deducted | WHT certification no]
+if your output have same  (Account number|Currency Type) multiple times, merge those all as one 
+Strictly follow the format given If you can not find a value to a given field include a “0” in the response instead.Do not add anything additional.

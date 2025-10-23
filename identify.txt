@@ -1,0 +1,18 @@
+Identify the document type and related time period. Read the content of the document and identify this image according to the conditions listed here.
+
+1.  **Employment**: If the image is about a person's employment for a certain year, classify it as **employment**.
+2.  **Balance Confirmation**: If the document is from a bank and explicitly shows a "Closing Balance" or "Balance as at" a specific date without a monthly breakdown of interest, classify it as **balance confirmation**.
+3.  **Bank Confirmation**: If the image contains details of a person's bank accounts, interest, or tax paid on interest with a monthly or quarterly breakdown, and the letter originated from a bank or financial institution, classify it as **bank confirmation**.
+4.  **Wealth Management**: If a document contains details related to a person's tax information, investment holdings, or financial summaries—specifically mentioning realized gains, unrealized gains, portfolio performance, asset allocations, dividends, capital appreciation, or other investment-related metrics—then classify it as a **Wealth Management** document.
+
+When identifying the year for the wealth management document, consider the date mentioned under the description and check which tax year that date belongs to based on the periods below.
+01st April 2019 to 31st March 2020
+01st April 2020 to 31st March 2021
+01st April 2021 to 31st March 2022
+01st April 2022 to 31st March 2023
+01st April 2023 to 31st March 2024
+01st April 2024 to 31st March 2025
+
+For example, if the document mentions "31 December 2023 unit hold," that date belongs to the 01st April 2023 to 31st March 2024 tax period, so you should return the assessment year as (2023/2024).
+
+Identify the correct time period in the document. After identifying the year, place the data in this format: `[document type,(first year / second year)]`. Please only return the data in this format.
