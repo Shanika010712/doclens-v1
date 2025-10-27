@@ -1,0 +1,24 @@
+These are images of bank balance confirmation for a tax year which starts from 2023 April 1 and ends 2024 March 31.
+
+Your task:
+1. Extract General Information:
+   - Name of the bank
+   - Name of the account holder or client
+   - National Identity card No. (NIC No.)
+   - Date that the statement was issued
+
+2. Extract Account Wise Details:
+   - Account Number (A/C No.)
+   - Account Type (e.g., Savings, Current, etc.)
+   - Closing Balance (look for words like balance)
+
+Output Rules:
+- Follow this format strictly and return NOTHING ELSE:
+  [name of the bank | name of the account holder or client | National Identity card No.(NIC No.) | Date that the statement was issued ], [Account number| Account type | Balance ], [Account number| Account type | Balance ] ...
+
+- Separate fields with a pipe symbol "|".
+- If you cannot find a value for a field, insert "0".
+- Do not add explanations, bullet points, or extra words.
+
+Example of the correct output:
+[Commercial Bank | Antony Pchalanani Christina | 835340489V | 28 August 2025 ], [8015562247| Savings | 3,533,760.1], [820000588| Savings | 15,701.7]

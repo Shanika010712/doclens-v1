@@ -1,0 +1,29 @@
+These are scanned images of bank balance confirmations for a tax year which starts on 1 April 2024 and ends on 31 March 2025.
+
+Your task is to extract the information from the document strictly in the format described below.
+
+1. General Information (exactly 5 fields):
+   - Year of assessment(2024/2025)
+   - Name of the bank
+   - Name of the account holder or client
+   - National Identity card No. (NIC No.)
+   - Date the statement was issued
+
+2. Account Wise Details (repeat for each account):
+   - Account Number (A/C No.)
+   - Currency (e.g., LKR, USD)
+   - Account Type (e.g., Savings, Current, Money Market)
+   - Closing Balance (numbers only, no words in brackets)
+   - Interest (numbers only; if not available, put 0)
+   - WHT(numbers only; if not available, put 0)
+
+⚠️ Output Rules:
+- Use this exact format:
+  [assessment year |bank name | account holder | NIC No. | issued date], [account number | currency | account type | balance | interest | WHT], [account number | currency | account type | balance | interest | WHT] ...
+- Use a pipe symbol `|` to separate fields.
+- Do not include extra text, brackets, or explanations.
+- If a field is missing in the document, write `0`.
+- Balances and interest must be plain numbers only (no words, commas, or extra symbols).
+
+Example:
+[2024/2025 |Commercial Bank | Antony Pchalanani Christina | 835340489V | 28 August 2025], [8015562247 | USD | Savings | 3533760.1 | 0 | 200], [820000588 | LKR | Savings | 15701.7 | 0 | 200]

@@ -1,0 +1,40 @@
+
+This image is part of a bank confirmation document for the tax year starting from April 1, 2023, and ending March 31, 2024. The document contains multiple images, and each image may have multiple rows corresponding to different bank accounts.
+
+Your task:
+
+Iterate through all rows and columns in every image to extract details for all accounts without skipping any.
+For each account, extract the following:
+Account Number: Listed under "Account No" or similar.
+Currency Type: Listed under "Currency." If missing, default to "LKR."
+Monthly Data: Extract the Gross Interest Paid, Withholding Tax (WHT) Deducted, and the name of the month:
+Use the date provided in the field "Interest/Discount paid for Period".
+Identify the correct month based on the start date of the range (e.g., 01-04-2023 to 30-04-2023 corresponds to April).
+Ensure the month name matches the start date exactly.
+Additional Details to Extract:
+
+Bank Information: Name of the bank.
+Account Holder Information: Name of the account holder or client and National Identity Card Number (NIC No.).
+Statement Date: The date the statement was issued.
+Output Format: For the overall details: [Name of the bank | Name of the account holder | National Identity Card No. | Date the statement was issued | WHT Agent TIN | WHT Certification No.]
+
+For each account: [Account Number | Currency Type]
+
+For each month's data: [Month | Gross Interest Paid | Withholding Tax (WHT) Deducted]
+
+If any accounts are missing monthly data, add entries with the month name and zeros, e.g., (Month|0|0).
+
+Example Format:[name of the bank | name of the account holder or client | National Identity card No.(NIC No.) | Date that the statement was issued | WHT agent TIN | WHT certification no.],[Account number|Currency Type],[Month| Gross Interest paid | Withholding Tax (WHT) deducted],[Month| Gross Interest paid | Withholding Tax (WHT) deducted]
+
+Instructions for Iteration Across All Images:
+
+Carefully review each image in the document set.
+Ensure all rows are processed, and no account numbers are skipped.
+Use the field "Interest/Discount paid for Period" to determine the correct month name for each row. Use the start date of the range to identify the month. For example:
+01-04-2023 to 30-04-2023 → April
+01-05-2023 to 31-05-2023 → May
+If a month is missing data for an account, add "Month|0|0" for that month in the output.
+Important Rules:
+Do not ignore any rows or accounts under the "Account No" column.
+Strictly follow the format. If any value is missing, return "0."
+Return results for all accounts in the document.don't give any additional details.

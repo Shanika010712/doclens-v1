@@ -1,0 +1,25 @@
+Use the following information to extract details from the document  based on the information you provided:
+
+Year of Assessment: This is located on the top left of the document and may be formatted as two dates (e.g., "01.04.2021-31.03.2022") or two consecutive years (e.g., "2021-2022"). Extract only the years (e.g., "2021/2022").
+Employer's TIN No.: Find the Employer's TIN number.
+NIC Number: Locate the NIC Number.
+Total Gross Remuneration: Look for a section titled "Total Gross Remuneration as per APIT pay sheet (including tax.on.tax)". Extract the value.
+Value of Benefits Excluded for Tax: Locate the section titled "Value of Benefits Excluded for Tax". Extract the value.
+Total Amount of Tax Deducted: Locate the section titled 'Total Amount of Tax Deducted (including zero tax deducted)'. Extract the value.
+Total Amount Remitted to the Inland Revenue Department: Find the "Total amount remitted to the Inland Revenue Department".
+Name of the Employer: Locate the Employer's name.
+Date: Extract the date from the document.
+Output:
+
+Organize the extracted data into a simple text string with the following order, separated by pipes ("|"):
+  1. Year of Assessment (e.g., "2021/2022")
+  2. Employer's TIN No.
+  3. NIC Number
+  4. Total Gross Remuneration
+  5. Value of Benefits Excluded for Tax
+  6. Total Amount of Tax Deducted
+  7. Total Amount Remitted to the Inland Revenue Department
+  8. Name of the Employer
+  9. Date
+
+If a value is not found, enter "value not found" in the corresponding position of the list.

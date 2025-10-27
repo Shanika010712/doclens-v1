@@ -1,0 +1,100 @@
+This image is part of a bank confirmation document for the tax year starting from April 1, 2024, and ending March 31, 2025. The document contains multiple images, and each image may have multiple rows corresponding to different bank accounts.
+
+Your task:
+
+Iterate through all rows and columns in every image to extract details for all accounts without skipping any.
+For each account, extract the following:
+Account Number: Listed under "Account No" or similar.
+Currency Type: Listed under "Currency." If missing, default to "LKR."
+Monthly Data: Extract the Gross Interest Paid, Withholding Tax (WHT) Deducted, and the name of the month:
+Use the date provided in the field "Interest/Discount paid for Period".
+Identify the correct month based on the start date of the range (e.g., 01-04-2023 to 30-04-2023 corresponds to April).
+Ensure the month name matches the start date exactly.
+
+
+document strcture:
+
+1. Header Section (Top Area of Each Page):
+Includes:
+Bank Name: Shown as “HNB” logo at top right
+Title: “Certificate of Annual Interest and WHT Deduction”
+Account Holder Details:Full name
+NIC number (e.g., 640840124V)
+Statement Issue Date: e.g., 31-03-2025
+WHT Agent TIN: sometimes present (may be omitted)
+WHT Certificate No.: sometimes missing
+Often followed by: "Personal/Business/Corporate Name"
+
+2. Main Table (Body of Each Page):
+Clearly structured tabular data with these columns:
+Account No. (repeats across rows for the same account)
+Currency
+Interest/Discount paid for Period: a date range (e.g., 01-04-2024 to 30-04-2024)
+Gross Interest Paid
+WHT Deducted
+
+Each row corresponds to one month's data for one account.
+
+📌 Important: Accounts may span multiple rows, and the same account will have one row per month.
+
+
+
+Additional Details to Extract:
+
+Bank Information: Name of the bank.
+Account Holder Information: Name of the account holder or client and National Identity Card Number (NIC No.).
+Statement Date: The date the statement was issued.
+Output Format: For the overall details: [Name of the bank | Name of the account holder | National Identity Card No. | Date the statement was issued | WHT Agent TIN | WHT Certification No.]fill the missing data with 0
+
+For each account:[Account Number | Currency Type | Closing Balance]
+
+For each month's data:[Month | Gross Interest Paid | Withholding Tax (WHT) Deducted | WHT Certificate No]
+
+If any accounts are missing monthly data, add entries with the month name and zeros, e.g., (Month|0|0).
+
+Example Format:[name of the bank | name of the account holder or client | National Identity card No.(NIC No.) | Date that the statement was issued | WHT agent TIN | WHT certification no.],[Account number|Currency Type|Closing Balance],[Month| Gross Interest paid | Withholding Tax (WHT) deducted|WHT Certificate No],[Month| Gross Interest paid | Withholding Tax (WHT) deducted|WHT Certificate No]
+
+Instructions for Iteration Across All Images:
+
+Carefully review each image in the document set.
+Ensure all rows are processed, and no account numbers are skipped.
+Use the field "Interest/Discount paid for Period" to determine the correct month name for each row. Use the start date of the range to identify the month. For example:
+
+01-04-2024 to 30-04-2024 → April
+
+01-05-2024 to 31-05-2024 → May
+
+01-06-2024 to 30-06-2024 → June
+
+01-07-2024 to 31-07-2024 → July
+
+01-08-2024 to 31-08-2024 → August
+
+01-09-2024 to 30-09-2024 → September
+
+01-10-2024 to 31-10-2024 → October
+
+01-11-2024 to 30-11-2024 → November
+
+01-12-2024 to 31-12-2024 → December
+
+01-01-2025 to 31-01-2025 → January
+
+01-02-2025 to 28-02-2025 → February
+
+01-03-2025 to 31-03-2025 → March
+
+If a month is missing data for an account, add "Month|0|0" for that month in the output.
+Important Rules:
+don't put spaces among items (eg: ], [)
+Do not ignore any rows or accounts under the "Account No" column.
+Strictly follow the format. If any value is missing, return "0."
+Carefully check the month and year is right or wrong.
+account number,rupee and under the table their should be all the month details for mentioned bank account.
+Return results for all accounts in the document.
+for one account get the all months and desplay in a one table.like wise if there 4 account numbers 4 tables including all the months details.
+the images are not in the month order.sometines 2025 march can be in the first page .their is no order.carefully check the correct month.
+don't mention any other description when you providing  the output.only required data items need to return.
+
+example output:
+[name of the bank | name of the account holder or client | National Identity card No.(NIC No.) | Date that the statement was issued | WHT agent TIN | WHT certification no.],[Account number|Currency Type],[Month| Gross Interest paid | Withholding Tax (WHT) deducted],[Month| Gross Interest paid | Withholding Tax (WHT) deducted]

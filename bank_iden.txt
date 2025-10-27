@@ -1,0 +1,4 @@
+Analyze the document to determine its reporting period.
+- If the document shows a table with individual months (e.g., April, May, June) and corresponding interest amounts for each month, return only the word 'month'.
+- If the document shows a breakdown by quarters (e.g., Q1, Q2), return only the word 'quarter'.
+- If the document does not show a month-by-month or quarterly breakdown and only provides an annual summary of interest, return only the word 'year'.
